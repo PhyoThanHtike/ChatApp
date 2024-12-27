@@ -23,7 +23,7 @@ app.use(
 );
 // Middleware to use the auth route
 app.use("/api/auth", authRoute);
-app.use("/api/message", messageRoute);
+app.use("/api/messages", messageRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
