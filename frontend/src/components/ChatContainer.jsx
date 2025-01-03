@@ -56,11 +56,12 @@ const ChatContainer = () => {
           >
             <div className="chat-image avatar">
               <div className="size-10 rounded-full border">
+                {/* put some default image */}
                 <img
                   src={
                     message.senderId === authUser._id
-                      ? authUser.profilePic || "/avatar.png"
-                      : selectedUser.profilePic || "/avatar.png"
+                      ? authUser.profilePic
+                      : selectedUser.profilePic
                   }
                   alt="profile pic"
                 />
@@ -71,6 +72,7 @@ const ChatContainer = () => {
                 {formatMessageTime(message.createdAt)}
               </time>
             </div>
+            {/* Chat Bubble */}
             <div className="chat-bubble flex flex-col">
               {message.image && (
                 <img
